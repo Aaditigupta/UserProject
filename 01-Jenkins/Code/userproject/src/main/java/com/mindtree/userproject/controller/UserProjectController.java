@@ -21,7 +21,7 @@ public class UserProjectController {
 	@Autowired
 	UserProject service;
 
-	@RequestMapping("/")
+	@RequestMapping("/index")
 	public String getFrontPage() {
 		return "Index";
 	}
