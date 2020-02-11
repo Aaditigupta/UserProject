@@ -22,6 +22,9 @@
   - name: Extract Tomcat
     command: "tar zxf /opt/SP/apps/tomcat.tar.gz  -C /opt/SP/apps/tomcat --strip-components 1"
 
+  - name: Remove root folder initially
+    command: rm -rf /opt/SP/apps/tomcat/webapps/Root
+  
   - name: Copy user_project Project War Files
     copy: src=templates/userproject-0.0.1-SNAPSHOT.war dest=/opt/SP/apps/tomcat/webapps/ROOT.war mode=0644
     notify:
